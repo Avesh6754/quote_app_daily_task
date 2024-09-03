@@ -23,7 +23,6 @@ class _GridViewMethodState extends State<GridViewMethod> {
             quote_list[index].quote,
             style: TextStyle(
                 fontSize: 13.5,
-
                 fontWeight: FontWeight.w500,
                 color: (index % 2 == 0) ? Colors.white : Colors.black),
           ),
