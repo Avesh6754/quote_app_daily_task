@@ -1,16 +1,11 @@
 # quote_app_daily_task
 
 A new Flutter project.
+<h1>GridView & ListView</h1>
+<p>
+ 
 
-## Getting Started
+  <img src="https://github.com/user-attachments/assets/a99fcc83-4f1a-405e-b721-3f73381c3c4c" width="22%" Height="35%">
+  <img src="https://github.com/user-attachments/assets/9ba5a443-120b-4704-874e-f532e56bf720" width="22%" Height="35%">
+  </p>
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
