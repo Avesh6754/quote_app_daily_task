@@ -38,14 +38,14 @@ AlertDialog alert_Dialog_box(BuildContext context)
     title: const Text(
       "Dialog with hero icon",
       style: TextStyle(
-        fontSize: 28,
+        fontSize: 20,
         fontWeight: FontWeight.w500,
       ),
     ),
     content: const Text(
       'A dialog is a type of model window that apperas in front of app content to provide critical information , or ask for a decisoion',
       style: TextStyle(
-          fontSize: 15,
+          fontSize: 12,
           fontWeight: FontWeight.w500,
           color: Colors.black54),
     ),

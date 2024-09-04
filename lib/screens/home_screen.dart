@@ -65,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   context: context,
                   builder: (context) => alert_Dialog_box(context));
             },
-            child: Icon(Icons.add),
+            child:Text('Dialog'),
           ),
           SizedBox(
             width: 20,
@@ -77,7 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   builder: (context) => dialod_box(context),
                 );
               },
-              child: Icon(Icons.upload_file)),
+              child: Text('Email'),),
           SizedBox(
             width: 20,
           ),
@@ -89,47 +89,111 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Container(
                       color: Colors.white,
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Row(
-                            children: [
-                              IconButton(
-                                  onPressed: () {
-                                    Navigator.of(context).pop();
-                                  },
-                                  icon: const Icon(Icons.cancel_outlined)),
-                              const Text(
-                                'Full-screen dialog title',
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.w500),
-                              ),
-                              Spacer(),
-                              TextButton(onPressed: () {}, child: const Text('Save'))
-                            ],
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(20),
-                            child: Column(
-                              children: [
-                                textfiledmethod(name:'Label' ,isIcons: true),
-                                SizedBox(height: 20,),
-                                textfiledmethod(name:'Event name' ,isIcons: false),
-                              ],
-                            ),
-                          ),
-                          Row(
+                         Padding(
+                           padding: const EdgeInsets.all(15),
+                           child: Column(
+                             crossAxisAlignment: CrossAxisAlignment.start,
+                             children: [
+                               Row(
+                                 children: [
+                                   IconButton(
+                                       onPressed: () {
+                                         Navigator.of(context).pop();
+                                       },
+                                       icon: const Icon(Icons.cancel_outlined)),
+                                   const Text(
+                                     'Full-screen dialog title',
+                                     style: TextStyle(
+                                         fontSize: 20,
+                                         fontWeight: FontWeight.w500),
+                                   ),
+                                   Spacer(),
+                                   TextButton(
+                                       onPressed: () {
+                                         Navigator.of(context).pop();
+                                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                                           content: const Text('Text Input Successful'),
+                                           duration: Duration(seconds: 2),
+                                           action: SnackBarAction(
+                                             label: 'Done',
+                                             onPressed: () {},
+                                           ),
+                                         ));
+                                       }, child: const Text('Save'))
+                                 ],
+                               ),
+                               SizedBox(
+                                 height: 20,
+                               ),
+                               textfiledmethod(name: 'Label', isIcons: true),
+                               SizedBox(
+                                 height: 10,
+                               ),
+                               textfiledmethod(name: 'Event name', isIcons: false),
+                               SizedBox(
+                                 height: 40,
+                               ),
+                               Text(
+                                 'From',
+                               ),
+                               SizedBox(
+                                 height: 10,
+                               ),
+                               Row(children: [
+                                 Expanded(child: textfiledmethod(name: 'Label', isIcons: true)),
+                                 SizedBox(
+                                   width: 10,
+                                 ),
+                                 Expanded(child: textfiledmethod(name: 'Label', isIcons: true)),
+                               ],),
+                               SizedBox(height: 40,),
+                               Text(
+                                 'To',
+                               ),
+                               SizedBox(
+                                 height: 10,
+                               ),
+                               Row(children: [
+                                 Expanded(child: textfiledmethod(name: 'Label', isIcons: true)),
+                                 SizedBox(
+                                   width: 10,
+                                 ),
+                                 Expanded(child: textfiledmethod(name: 'Label', isIcons: true)),
+                               ],),
+                               SizedBox(
+                                 height: 30,
+                               ),
+                               Row(
+                                 children: [
+                                   Checkbox(
+                                     value: false,
+                                     onChanged: (value) {},
+                                   ),
+                                   Text('All day'),
+                                 ],
+                               ),
+                               SizedBox(
+                                 height: 30,
+                               ),
+                               Text('Timezone'),
+                               SizedBox(height: 10,),
+                               textfiledmethod(name: 'Label', isIcons: true),
+                             ],
+                           ),
+                         )
 
-                          )
+
                         ],
                       ),
                     ),
                   ),
                 );
               },
-              child: Icon(Icons.remove)),
+              child: Text('Input'),),
         ],
       ),
     );
   }
-
-
 }

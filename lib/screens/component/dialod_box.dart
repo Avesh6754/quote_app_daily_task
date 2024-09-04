@@ -12,7 +12,7 @@ AlertDialog dialod_box(BuildContext context) {
     title: const Text(
       'Reset settings?',
       style:
-      TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
+      TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
     ),
     content: Column(
       mainAxisSize: MainAxisSize.min,
@@ -20,12 +20,12 @@ AlertDialog dialod_box(BuildContext context) {
         const Text(
           'This will reset your app preferences back to their default settings. The following accounts will also be signed out',
           style: TextStyle(
-              fontSize: 15,
+              fontSize: 12,
               fontWeight: FontWeight.w500,
               color: Colors.black54),
         ),
         const Divider(
-          thickness: 2,
+          thickness: 1,
         ),
         row_email_box(img: 'https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg',name:'leevillanuevanotes@gmail.com' ),
         const SizedBox(height: 10,),
@@ -33,7 +33,7 @@ AlertDialog dialod_box(BuildContext context) {
         const SizedBox(height: 10,),
         row_email_box(img: 'https://preview.redd.it/new-profile-pictures-for-yall-v0-brdjms2xte3c1.jpg?width=640&crop=smart&auto=webp&s=a785e9ec16789276c74b19398f4f41b471f672f8',name:'oliortega@gmail.com' ),
         const Divider(
-          thickness: 2,
+          thickness: 1,
         ),
 
       ],

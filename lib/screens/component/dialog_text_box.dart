@@ -11,7 +11,7 @@ Row row_email_box({required String name,required String img}) {
       ),
       SizedBox(width: 20,),
       Text(name, style: TextStyle(
-          fontSize: 15,
+          fontSize: 11,
           fontWeight: FontWeight.w500,
           color: Colors.black54),)
 
