@@ -22,14 +22,14 @@ class _GridViewMethodState extends State<GridViewMethod> {
           title: Text(
             quote_list[index].quote,
             style: TextStyle(
-                fontSize: 13.5,
+                fontSize: 15,
                 fontWeight: FontWeight.w500,
                 color: (index % 2 == 0) ? Colors.white : Colors.black),
           ),
           subtitle: Text(
             "-- ${quote_list[index].author}",
             style: TextStyle(
-                fontSize: 12,
+                fontSize: 13,
                 fontStyle: FontStyle.italic,
                 color: (index % 2 == 0) ? Colors.white : Colors.black,
                 fontWeight: FontWeight.w400),
