@@ -26,6 +26,7 @@ AlertDialog dialod_box(BuildContext context) {
         ),
         const Divider(
           thickness: 1,
+
         ),
         row_email_box(img: 'https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg',name:'leevillanuevanotes@gmail.com' ),
         const SizedBox(height: 10,),
