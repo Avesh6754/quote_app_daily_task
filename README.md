@@ -13,6 +13,60 @@ A new Flutter project.
 
 https://github.com/user-attachments/assets/b9b06c4b-596b-47b5-9bbc-a9b72e094b9a
 
+# Flutter UI Components and Dart Utilities
+
+This repository contains examples and explanations of various Flutter UI components and Dart utilities. Each section includes a brief definition and a corresponding code example.
+
+## 1. Dialog Box
+
+**Definition:**  
+A dialog box is a small window that appears on top of the main content to prompt the user for input or provide important information. It usually includes options to confirm or cancel an action.
+
+**Code Example:**
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text('Dialog Box Example')),
+        body: Center(
+          child: ElevatedButton(
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return AlertDialog(
+                    title: Text('Dialog Title'),
+                    content: Text('This is a dialog box content.'),
+                    actions: <Widget>[
+                      TextButton(
+                        child: Text('Close'),
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                    ],
+                  );
+                },
+              );
+            },
+            child: Text('Show Dialog'),
+          ),
+        ),
+      ),
+    );
+  }
+}
+```
+
 <h1>DialogBox & Snackbar</h1>
 <p>
 
