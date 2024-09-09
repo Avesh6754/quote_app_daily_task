@@ -66,6 +66,116 @@ class MyApp extends StatelessWidget {
   }
 }
 ```
+# Flutter Snackbar Component
+
+The `Snackbar` component in Flutter provides brief feedback about an operation through a message that appears at the bottom of the screen. It is often used for showing temporary notifications or alerts to users.
+
+## Features
+
+- **Auto Dismissal**: Automatically disappears after a specified duration.
+- **Custom Actions**: Includes optional action buttons.
+- **Customizable Styles**: Allows for customization of appearance and behavior.
+- **Integration**: Easily integrates with Flutter's `Scaffold` for showing messages.
+
+## Installation
+
+To use the Snackbar component, add the following dependency to your `pubspec.yaml` file:
+
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  your_package_name: ^1.0.0
+```
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Snackbar Example'),
+        ),
+        body: Center(
+          child: SnackbarExample(),
+        ),
+      ),
+    );
+  }
+}
+
+class SnackbarExample extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('This is a Snackbar message'),
+            duration: Duration(seconds: 3), // Duration in seconds
+          ),
+        );
+      },
+      child: Text('Show Snackbar'),
+    );
+  }
+}
+```
+## Props (Snackbar Parameters)
+The SnackBar widget in Flutter accepts the following parameters:
+
+### content (Widget):
+The primary content of the Snackbar, typically a Text widget.
+### action (SnackBarAction): 
+An optional action button that appears alongside the message.
+### duration (Duration): 
+The amount of time the Snackbar will be visible before automatically dismissing.
+### backgroundColor (Color): 
+The background color of the Snackbar.
+### behavior (SnackBarBehavior):
+Determines how the Snackbar should be displayed (e.g., fixed or floating).
+## Examples
+### Snackbar with Action Button
+```dart
+Copy code
+ScaffoldMessenger.of(context).showSnackBar(
+  SnackBar(
+    content: Text('Item deleted'),
+    action: SnackBarAction(
+      label: 'Undo',
+      onPressed: () {
+        // Handle the action
+      },
+    ),
+    duration: Duration(seconds: 5),
+  ),
+);
+Custom Styles
+dart
+Copy code
+ScaffoldMessenger.of(context).showSnackBar(
+  SnackBar(
+    content: Text('Custom styled Snackbar'),
+    duration: Duration(seconds: 4),
+    backgroundColor: Colors.teal,
+    behavior: SnackBarBehavior.floating,
+  ),
+);
+```
+## Accessibility
+The Snackbar component supports accessibility by default. Make sure your content widget (typically Text) has appropriate semantic labels.
+
+## Troubleshooting
+### Snackbar does not appear: 
+Ensure you are using ScaffoldMessenger.of(context).showSnackBar() and that the context is correctly passed.
+Snackbar not dismissing automatically: Verify that the duration parameter is correctly set.
 
 <h1>DialogBox & Snackbar</h1>
 <p>
